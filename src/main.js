@@ -48,14 +48,14 @@ $(document).ready(function () {
           if (`${mainbodyData[i].practices[0].accepts_new_patients}` === true) {
             $('#doctorOutput').append('<p>Accepting New Patients</p>');
           } else {
-            $('#doctorOutput').append('<p>Not Accepting New Patients</p>')
+            $('#doctorOutput').append('<p>Not Accepting New Patients</p>');
           }
 
           // CHECK FOR WEBSITE
           if (`${mainbodyData[i].practices.website}` === 'undefined') {
             $('#doctorOutput').append(`<p>No Website On File</p>`);
           } else {
-            $('#doctorOutput').append(`<p>Website: ${mainbodyData[i].practices[0].website}</p>`);
+            $('#doctorOutput').append(`<p><b>Website:</b>${mainbodyData[i].practices[0].website}</p>`);
           }
         }
       }
@@ -71,7 +71,6 @@ $(document).ready(function () {
     event.preventDefault();
 
     let inputIssue = $('#inputIssue').val();
-    console.log(inputIssue);
 
   });
 
