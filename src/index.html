@@ -11,21 +11,28 @@
 <body>
     <div class="container">
         <h1>Doctor!</h1>
-        <form id="doctorForm">
-            <label for="inputLocation">Location:</label>
-            <input id="inputLocation" type="text" placeholder="Location">
-            <br>
+        <br>
+
+        <form id="formName">
             <label for="inputName">Doctor Name:</label>
             <input id="inputName" type="text" placeholder="Doctor Name">
             <br>
+            <button type="submit" class="btn-info">Search</button>
+        </form>
+
+        <hr>
+
+        <form id="formIssue">
             <label for="inputIssue">Your Medical Issue:</label>
             <input id="inputIssue" type="text" placeholder="Your Medical Issue">
             <br>
             <button type="submit" class="btn-info">Search</button>
         </form>
+
+        <hr>
+        <br>
         <p class="errorOutput"></p>
         <p class="doctorOutput"></p>
-        <p class="nodoctorOutput"></p>
     </div>
 </body>
 
