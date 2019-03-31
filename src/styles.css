@@ -1,15 +1,11 @@
 input {
-  width: 150px;
+  width: 300px;
 }
 
-.nodoctorOutput {
-  color: orange;
+#doctorOutput {
+  color: black;
 }
 
-.doctorOutput {
-  color: green;
-}
-
-.errorOutput {
+#errorOutput {
   color: red;
 }
