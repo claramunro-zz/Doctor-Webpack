@@ -1,4 +1,4 @@
-import Birthday from '../src/solar';
+import Doctor from '../src/doctor';
 import $ from 'jquery';
 import 'bootstrap';
 import './styles.css';
@@ -14,7 +14,7 @@ $(document).ready(function () {
     let yearInput = parseInt($("#yearInput").val());
     let expectancy = parseInt($("#expectancyInput").val());
 
-    let birthday = new Birthday(yearInput, monthInput, dayInput, expectancy);
+    let birthday = new Doctor(yearInput, monthInput, dayInput, expectancy);
     console.log(birthday);
 
 

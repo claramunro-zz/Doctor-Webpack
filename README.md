@@ -1,23 +1,22 @@
-# Super Galactic Age Calculator
+# Doctor
 
 ## Description
-An application that determines a user’s age based on a planet’s solar years
+Doctor is a website where users may enter a medical issue (ie: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in their city who can treat their medical issue.
 
 ## Specifications
 
-* Input: User age from their birthday input
-* Input: life expectancy in years
-* Output: User age in Earth Years, Mercury Years, Venus Years, Mars Years & Jupiter Years
-* Output: Users number of remaining years on Earth, Mercury, Venus, Mars & Jupiter
-* Output: If User has already lived past life expectancy, return how many years have past.
+* Input: Medical issue | Output: Receive a list of doctors in the Portland area that fit the search query
+* Input: Name | Output: Receive a list of doctors in the Portland area that fit the search query
+* For all doctor outputs: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients.
 
-    * Earth Year: 1 Earth Year (365 days)
-    * Mercury Year: .24 Earth Years
-    * Venus Year: .62 Earth Years
-    * Mars Year: 1.88 Earth Years
-    * Jupiter Year: 11.86 Earth Years
+* If the API call results in an error (any message not a 200 OK), the application should return a notification that states what the error is.
+* If the query response doesn't include any doctors (if no doctors meet the search criteria), the application should return a notification that states that no doctors meet the criteria.
 
 ### Setup Instructions
+* You will need your own API key for the BetterDoctor API
+* Request an API key at https://developer.betterdoctor.com
+* Once you have your key, replace "${process.env.exports.apiKey}" with your own API key (remove the $ and curly brackets)
+
 * Clone this repository to your desktop using "git clone""(repository link).""
 * Open in preferred text editor to see all code used
 * Navigate to project directory
@@ -33,6 +32,7 @@ Make sure you have Node.js installed.
 * No known bugs
 
 ### Languages/Libraries Used
+* Better Doctor API
 * Javascript
 * CSS
 * Bootstrap
@@ -41,7 +41,7 @@ Make sure you have Node.js installed.
 * Karma / Jasmine
 * NPM
 
-### GitHub Pages link
-put link here
+### GitHub Repo link
+https://github.com/claramunro/doctor
 
 Copyright (c) 2019 Clara Munro
