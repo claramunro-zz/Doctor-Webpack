@@ -41,6 +41,12 @@ $(document).ready(function () {
           // PHONE
           $('#doctorOutput').append(`<p><b>Phone:</b> ${mainbodyData[i].practices[0].phones[0].number}</p>`);
           
+          // CHECK WEBSITE --  IF STATEMENT
+
+
+          // CHECK ACCEPTING NEW PATIENTS -- IF STATEMENT
+
+
         }
       }
 
