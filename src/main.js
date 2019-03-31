@@ -41,6 +41,9 @@ $(document).ready(function () {
           // PHONE
           $('#doctorOutput').append(`<p><b>Phone:</b> ${mainbodyData[i].practices[0].phones[0].number}</p>`);
           
+
+          $('#doctorOutput').append(`<img src=${mainbodyData[i].profile.image_url}></img>`);
+
           // CHECK WEBSITE --  IF STATEMENT
 
 
