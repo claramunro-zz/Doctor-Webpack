@@ -1,8 +1,5 @@
 let apiKey = process.env.exports.apiKey;
 
-// 1. test out no value for name
-// 2. test out no value for issue
-
 export default class Doctor {
   constructor(inputName, inputIssue) {
     this.inputName = inputName;
@@ -14,7 +11,7 @@ export default class Doctor {
       let request = new XMLHttpRequest();
       let location = "or-portland";
       let url = `https://api.betterdoctor.com/2016-03-01/doctors?location=${location}&skip=0&limit=10&name=${this.inputName}&user_key=${apiKey}`;
-     
+
       request.onload = function () {
         if (this.status === 200) {
           resolve(request.response);
@@ -23,23 +20,20 @@ export default class Doctor {
           alert('Error with the API request');
         }
       };
-      
+
       request.open("GET", url, true);
       request.send();
     });
   }
 
-  // 3. figure out url for specialty search
-
   lookUpByIssue() {
     return new Promise((resolve, reject) => {
       let request = new XMLHttpRequest();
-      let location = "or-portland";
 
 
       // WHAT IS THE LOOKUP SPECIALTY URL?
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?location=${location}&skip=0&limit=10&name=${this.inputIssue}&user_key=${apiKey}`;
-     
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${loation}&location=or-portland&skip=0&limit=11&user_key=${apiKey}`;
+
 
       request.onload = function () {
         if (this.status === 200) {
@@ -49,7 +43,7 @@ export default class Doctor {
           alert('Error with the API request');
         }
       };
-      
+
       request.open("GET", url, true);
       request.send();
     });

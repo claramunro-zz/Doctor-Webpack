@@ -90,8 +90,11 @@ $(document).ready(function () {
       } else {
         for (let i = 0; i < mainbodyData.length; i++) {
 
+          $('#doctorOutputIssue').append(`<h2>${mainbodyData[i].profile.first_name} ${mainbodyData[i].profile.last_name} ${mainbodyData[i].profile.title}</h2>`);
+
+
           // SPECIALTY INPUT FOR API?
-          $('#doctorOutputIssue').append(`<p>${mainbodyData.specialties}</p>`);
+          $('#doctorOutputIssue').append(`<p>${mainbodyData[i].specialties[0].name}</p>`);
         }
       }
     }, function (error) {
