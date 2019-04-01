@@ -44,8 +44,10 @@ $(document).ready(function () {
           // IMAGE
           $('#doctorOutputName').append(`<img src=${mainbodyData[i].profile.image_url}></img>`);
 
+          $('#doctorOutputName').append(`<p>${mainbodyData[i].specialties[i].description}</p>`);
+
           // CHECK NEW PATIENTS
-          if (`${mainbodyData[i].practices[0].accepts_new_patients}` === true) {
+          if (`${mainbodyData[i].practices[0].accepts_new_patients}` === `true`) {
             $('#doctorOutputName').append('<p>Accepting New Patients</p>');
           } else {
             $('#doctorOutputName').append('<p>Not Accepting New Patients</p>');
@@ -90,11 +92,10 @@ $(document).ready(function () {
       } else {
         for (let i = 0; i < mainbodyData.length; i++) {
 
-          $('#doctorOutputIssue').append(`<h2>${mainbodyData[i].profile.first_name} ${mainbodyData[i].profile.last_name} ${mainbodyData[i].profile.title}</h2>`);
-
+          // $('#doctorOutputIssue').append(`<h2>${mainbodyData[i].profile.first_name} ${mainbodyData[i].profile.last_name} ${mainbodyData[i].profile.title}</h2>`);
 
           // SPECIALTY INPUT FOR API?
-          $('#doctorOutputIssue').append(`<p>${mainbodyData[i].specialties[0].name}</p>`);
+          $('#doctorOutputIssue').append(`<p>${mainbodyData[i].specialties[i].description}</p>`);
         }
       }
     }, function (error) {
