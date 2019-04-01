@@ -10,32 +10,41 @@
 
 <body>
     <div class="container">
-        <h1>Doctor!</h1>
+        <h1>Doctor Search</h1>
         <br>
 
-        <form id="formName">
-            <label for="inputName">Doctor Name:</label>
-            <input id="inputName" type="text" placeholder="Doctor Name">
-            <br>
-            <button type="submit" class="btn-info">Search</button>
-        </form>
+        <div class="nameSection">
+            <form id="formName">
+                <label for="inputName">Search By Doctor Name:</label>
+                <input id="inputName" type="text" placeholder="Doctor Name">
+                <br>
+                <button type="submit" class="btn-customClara">Search</button>
+            </form>
+        </div>
+       
 
-        <hr>
+        <div class="issueSection">
+            <form id="formIssue">
+                <label for="inputIssue">Search By Your Medical Issue:</label>
+                <input id="inputIssue" type="text" placeholder="Your Medical Issue">
+                <br>
+                <button type="submit" class="btn-customClara">Search</button>
+            </form>
+        </div>
 
-        <form id="formIssue">
-            <label for="inputIssue">Your Medical Issue:</label>
-            <input id="inputIssue" type="text" placeholder="Your Medical Issue">
-            <br>
-            <button type="submit" class="btn-info">Search</button>
-        </form>
+     
 
-        <hr>
         <br>
         
-        <!-- APPEND HERE -->
+        <!-- NAME SECTION-->
 
-        <ul id="errorOutput"></ul>
-        <ul id="doctorOutput"></ul>
+        <ul id="errorOutputName"></ul>
+        <ul id="doctorOutputName"></ul>
+
+        <!-- ISSUE SECTION -->
+    
+        <ul id="errorOutputIssue"></ul>
+        <ul id="doctorOutputIssue"></ul>
     </div>
 </body>
 

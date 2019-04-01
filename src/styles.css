@@ -9,3 +9,26 @@ input {
 #errorOutput {
   color: red;
 }
+
+html {
+  background-color: rgb(26, 48, 148);
+  color: white;
+}
+
+.btn-customClara {
+  width: 100px;
+  height: 30px;
+  background-color: #CDCDCD;
+}
+
+.nameSection {
+  padding: 20px;
+}
+
+.issueSection {
+  padding: 20px;
+}
+
+.container {
+  padding: 20px;
+}
