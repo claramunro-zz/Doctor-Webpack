@@ -29,12 +29,9 @@ export default class Doctor {
   lookUpByIssue() {
     return new Promise((resolve, reject) => {
       let request = new XMLHttpRequest();
+      let location = "or-portland";
 
-
-      // WHAT IS THE LOOKUP SPECIALTY URL?
-      // let url = `https://api.betterdoctor.com/2016-03-01/specialties?skip=0&limit=20&user_key=${apiKey}`;
-
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?location=${location}&skip=0&limit=10&specialties=${this.inputIssue}&user_key=${apiKey}`;
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${this.inputIssue}&location=${location}&skip=0&limit=10&user_key=${apiKey}`;
 
 
       request.onload = function () {

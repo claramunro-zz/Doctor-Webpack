@@ -13,7 +13,7 @@ $(document).ready(function () {
     let inputName = $('#inputName').val();
     console.log(inputName);
 
-    let newDoc = new Doctor(inputName);
+    let newDoc = new Doctor(inputName, 0);
 
     $('#doctorOutputName').empty();
     $('#errorOutputName').empty();
@@ -75,7 +75,7 @@ $(document).ready(function () {
 
     let inputIssue = $('#inputIssue').val();
 
-    let newDoc = new Doctor(inputIssue);
+    let newDoc = new Doctor(0, inputIssue);
 
     $('#doctorOutputIssue').empty();
     $('#errorOutputIssue').empty();
@@ -93,6 +93,7 @@ $(document).ready(function () {
         for (let i = 0; i < mainbodyData.length; i++) {
 
           // $('#doctorOutputIssue').append(`<h2>${mainbodyData[i].profile.first_name} ${mainbodyData[i].profile.last_name} ${mainbodyData[i].profile.title}</h2>`);
+          $('#doctorOutputName').append(`<h2>${mainbodyData[i].profile.first_name} ${mainbodyData[i].profile.last_name} ${mainbodyData[i].profile.title}</h2>`);
 
           // SPECIALTY INPUT FOR API?
           $('#doctorOutputIssue').append(`<p>${mainbodyData[i].specialties[i].description}</p>`);
