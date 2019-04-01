@@ -13,35 +13,34 @@
         <h1>Doctor Search</h1>
         <br>
 
+        <!-- NAME INPUT SECTION-->
         <div class="nameSection">
             <form id="formName">
                 <label for="inputName">Search By Doctor Name:</label>
-                <input id="inputName" type="text" placeholder="Doctor Name">
+                <input id="inputName" type="text" placeholder="Doctor Name" required>
                 <br>
                 <button type="submit" class="btn-customClara">Search</button>
             </form>
         </div>
        
-
+        <!-- ISSUE INPUT SECTION-->
         <div class="issueSection">
             <form id="formIssue">
                 <label for="inputIssue">Search By Your Medical Issue:</label>
-                <input id="inputIssue" type="text" placeholder="Your Medical Issue">
+                <input id="inputIssue" type="text" placeholder="Your Medical Issue" requried>
                 <br>
                 <button type="submit" class="btn-customClara">Search</button>
             </form>
         </div>
 
-     
-
         <br>
         
-        <!-- NAME SECTION-->
+        <!-- NAME OUTPUT SECTION-->
 
         <ul id="errorOutputName"></ul>
         <ul id="doctorOutputName"></ul>
 
-        <!-- ISSUE SECTION -->
+        <!-- ISSUE OUTPUT SECTION -->
     
         <ul id="errorOutputIssue"></ul>
         <ul id="doctorOutputIssue"></ul>
